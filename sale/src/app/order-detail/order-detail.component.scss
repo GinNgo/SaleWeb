@@ -1,0 +1,130 @@
+.container {
+  position: relative;
+  width: 100vw;
+  height: 1041px;
+  margin: 0px;
+  padding: 0px;
+  background: #f9f9f9;
+  //back to order
+  .close {
+    position: relative;
+    width: max-content;
+    left: 3.62%;
+    right: 91.55%;
+    top: 1.44%;
+    bottom: 96.64%;
+    z-index: 99;
+    svg {
+      position: absolute;
+    }
+  }
+  //container-infor
+  .container-infor {
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    .product-img {
+      position: absolute;
+      width: 414px;
+      height: 250px;
+      border-radius: 0px 0px 5px 5px;
+    }
+    //invoice
+    .invoice {
+      position: absolute;
+      width: max-content;
+      left: 65.46%;
+      right: 3.14%;
+      top: 28.6vh;
+
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 13px;
+      line-height: 15px;
+      text-align: center;
+      text-decoration-line: underline;
+      text-transform: capitalize;
+
+      color: #000000;
+    }
+    .circle {
+      position: relative;
+      height: 10.87vw;
+      width: 10.87vw;
+      border-radius: 50%;
+      left: 2.42vw;
+      top: 270px;
+      display: flex;
+      .acronym {
+        position: absolute;
+        width: 5.8vw;
+        height: 2.34375vh;
+        left: 2.42vw;
+        right: 3.62vw;
+        top: 1.4vh;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 2.34375vh;
+        text-align: center;
+        text-transform: capitalize;
+        color: #ffffff;
+      }
+    }
+    .cus-name {
+      position: absolute;
+      left: 16%;
+      right: 46.62%;
+      top: 282px;
+      bottom: 70.7%;
+      width: max-content;
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 24px;
+      text-align: center;
+      text-transform: capitalize;
+
+      color: #d97c76;
+    }
+  }
+  .container-detail {
+    position: relative;
+    top: 300px;
+    height: 702px;
+    width: 300px;
+    left: 58px;
+
+    .progress-bill {
+      border-bottom: 1px solid #294d1d;
+      height: 26px;
+      margin: 0px;
+      padding: 0px 0px 0px 26px;
+      p {
+        width: 120px;
+        height: 28px;
+        line-height: 28px;
+        float: left;
+        text-align: center;
+        color: #294d1d;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 300;
+      }
+      .active {
+        background: #f9f9f9;
+        border: 1px solid #294d1d;
+        border-bottom: solid #f9f9f9;
+        box-sizing: border-box;
+        border-radius: 5px 5px 0px 0px;
+        color: rgba(18, 57, 4, 0.9);
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+      }
+    }
+  }
+}

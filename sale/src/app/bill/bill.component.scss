@@ -1,0 +1,229 @@
+.container-bill {
+  position: relative;
+  margin: 0px;
+  padding: 0px;
+  top: 16px;
+  overflow: scroll;
+  width: 100vw;
+  height: 400px;
+  margin-left: -58px;
+
+  label {
+    position: absolute;
+    width: max-content;
+    left: 0px;
+    left: 58px;
+
+    margin-top: 10px;
+  }
+  input {
+    position: absolute;
+    width: 294px;
+    border: none;
+    height: 20px;
+    background: #f9f9f9;
+    padding-bottom: 5px;
+    font-size: 18px;
+    left: 58px;
+    margin-top: 10px;
+    border-bottom: 0.5px solid black;
+  }
+  input:focus {
+    outline-style: none;
+  }
+
+  .price-total-container {
+    position: absolute;
+    top: 126px;
+    width: 414px;
+    height: 45px;
+
+    background: #d3e4cd;
+    .price-total-title {
+      position: absolute;
+      left: 14.25%;
+      top: 12px;
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 21px;
+      /* identical to box height */
+
+      text-align: center;
+      color: #294d1d;
+    }
+    .price-total {
+      margin-top: 12px;
+
+      float: right;
+      margin-right: 58px;
+      width: max-content;
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 21px;
+      /* identical to box height */
+      text-align: center;
+      text-transform: capitalize;
+
+      color: #eb9025;
+    }
+  }
+  .container-price {
+    position: relative;
+
+    top: 84px;
+    label {
+      margin-top: 20px;
+    }
+    input {
+      left: 58px;
+      padding: 0px;
+      margin-top: 20px;
+    }
+  }
+  .button-edit {
+    position: fixed;
+    top: 830px;
+    width: 360px;
+    height: 50px;
+    left: 27px;
+    background: #247009;
+    border: solid #247009;
+    border-radius: 5px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    text-transform: capitalize;
+
+    color: #ffffff;
+  }
+}
+//recipe-container
+.backgroud-change {
+  position: relative;
+  margin-top: -372px;
+  margin-left: -58px;
+  width: 414px;
+  height: 100vh;
+  background: #123904;
+  opacity: 90%;
+  z-index: 99;
+}
+.recipe-container {
+  position: relative;
+  width: 380px;
+  height: 330px;
+  display: none;
+  top: 0px;
+  margin-top: -486px;
+  margin-left: -40px;
+  background: #f9f9f9;
+  border-radius: 5px;
+  .recipe-title {
+    position: absolute;
+    width: 100%;
+    height: 28px;
+    top: 26px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    text-transform: capitalize;
+
+    color: #247009;
+  }
+  .price-container {
+    position: relative;
+    width: 100%;
+    top: 80px;
+    left: 24px;
+    right: 24px;
+    .price-group {
+      position: absolute;
+      width: 98vw;
+
+      .title {
+        width: max-content;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 21px;
+        /* identical to box height */
+
+        color: #000000;
+      }
+      .price {
+        float: right;
+        width: max-content;
+        margin-top: -32px;
+        margin-right: 76px;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 21px;
+        /* identical to box height */
+
+        text-align: right;
+
+        color: #000000;
+      }
+      .price-total {
+        float: right;
+        margin-top: -32px;
+        margin-right: 76px;
+        width: max-content;
+        left: 192px;
+        right: 70px;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 21px;
+        /* identical to box height */
+
+        text-align: center;
+        text-transform: capitalize;
+
+        color: #eb9025;
+      }
+    }
+    .button-OK {
+      position: absolute;
+      top: 200px;
+      width: 32px;
+      height: 28px;
+      left: 156px;
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 28px;
+      text-align: center;
+      text-transform: capitalize;
+      border: 0px;
+      margin: 0px;
+      padding: 0px;
+      background: none;
+      /* main color */
+
+      color: #008080;
+    }
+  }
+}
+.recipe-display {
+  display: block;
+  z-index: 999;
+}
+.bill-change {
+  margin-top: -572px;
+}

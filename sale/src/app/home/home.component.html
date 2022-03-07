@@ -1,0 +1,67 @@
+<div class="container">
+  <div class="container-1">
+    <h2 class="shop-name">Trầm’s Shop</h2>
+  </div>
+  <div class="container-2">
+    <div
+      class="router-menu"
+      [routerLink]="['/order']"
+      routerLinkActive="router-link-active"
+    >
+      <img class="img-order" src="../assets/images/order.png" />
+      <p class="title">Đơn hàng</p>
+    </div>
+    <div class="router-menu">
+      <img class="img-customer" src="../assets/images/customer.png" />
+      <p
+        class="title"
+        [routerLink]="['/customer']"
+        routerLinkActive="router-link-active"
+      >
+        Khách hàng
+      </p>
+    </div>
+    <div class="router-menu">
+      <img class="img-product" src="../assets/images/product.png" />
+      <p class="title">Sản phẩm</p>
+    </div>
+    <div class="router-menu">
+      <img class="img-report" src="../assets/images/report.png" />
+      <p class="title">Báo cáo</p>
+    </div>
+  </div>
+</div>
+<footer>
+  <p class="developer-by">Phát triển bởi Kana</p>
+  <p class="version">Ver.0.0.1</p>
+</footer>
+<!-- <div [routerLink]="['/customer']">Customers</div>
+<div [routerLink]="['/order']">Orders</div> -->
+<!-- <app-combo-box [list]="itemList"></app-combo-box> -->
+<!-- <form autocomplete="off" #bookForm="ngForm">
+  <div class="form-group">
+    <label for="bookName">Book Name</label>
+    <input
+      name="name"
+      required
+      minlength="3"
+      [(ngModel)]="book.name"
+      type="text"
+      class="form-control"
+    />
+    <pre>{{ bookForm.controls.name?.errors | json }}</pre>
+    <label for="year">Year</label>
+    <input name="year" [ngModel]="book.year" type="text" class="form-control" />
+
+    <label for="stars">Stars</label>
+    <input
+      name="stars"
+      [ngModel]="book.stars"
+      type="text"
+      class="form-control"
+    />
+  </div>
+  <button type="submit" class="btn btn-primary mr-1">Save</button>
+</form>
+
+<pre>{{ bookForm.value | json }}</pre> -->

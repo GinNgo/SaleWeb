@@ -1,0 +1,197 @@
+@media screen and (max-height: 896px) and (max-width: 414px) {
+  .container {
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+  }
+  .close svg {
+    position: absolute;
+    left: 92.03vw;
+    right: 3.14vw;
+    top: 3.35vh;
+    bottom: 94.42vh;
+  }
+  .title-infor {
+    position: absolute;
+    width: 58.7vw;
+    height: 3.125vh;
+    left: 20.8vw;
+    top: 7.8125vh;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 5.8vw;
+    line-height: 28px;
+    text-align: center;
+    text-transform: capitalize;
+    display: block;
+    color: #247009;
+  }
+  .form-search {
+    position: absolute;
+    width: 91.79vw;
+    left: 4.1vw;
+    top: 12.61vh;
+    right: 4.1vw;
+    z-index: 1;
+  }
+  .autocom-box {
+    background: white;
+    margin: 1px;
+    padding-top: 40px;
+    height: 500px;
+    display: block;
+    overflow-y: auto;
+    opacity: 0;
+  }
+  .autocom-box li {
+    list-style: none;
+    padding: 0px 12px;
+    font-size: 3.8vw;
+    cursor: default;
+    border-radius: 3px;
+  }
+  .form-search .input {
+    z-index: 1;
+    position: absolute;
+    width: 91.79vw;
+    height: 3.3vh;
+
+    background: #d3e4cd;
+    border-radius: 5px;
+  }
+  .form-search .input svg {
+    z-index: 1;
+    position: absolute;
+    margin-left: 3%;
+    top: 25%;
+  }
+  .input .search {
+    position: absolute;
+    padding-left: 9%;
+    height: 90%;
+    width: 90%;
+
+    border: none;
+    border-radius: 5px;
+    background: #d3e4cd;
+  }
+  .filter-container {
+    position: absolute;
+    height: 1.7vh;
+    width: 100vw;
+    left: 4.8vw;
+    right: 4.8vw;
+    top: 18vh;
+  }
+  .filter-container .amount-cus {
+    width: 21.26vw;
+    height: 1.7vh;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 3.1vw;
+    line-height: 1.7vh;
+    text-align: center;
+    text-transform: capitalize;
+    float: left;
+  }
+  .filter-container .sort-container {
+    position: relative;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.5vh;
+    line-height: 1.7vh;
+    left: 56.4vw;
+    float: left;
+    color: #247009;
+  }
+  .filter-container .sort-container .sort {
+    display: flex;
+    font-size: 3.1vw;
+    margin-left: 0.48vw;
+    float: right;
+  }
+  .customer-list {
+    position: absolute;
+    width: 100vw;
+    top: 20.97vh;
+    height: 79.13vh;
+    overflow: scroll;
+  }
+  .customer-list .form-infor {
+    position: relative;
+    width: 100vw;
+    height: 7.8125vh;
+    left: 0.24vw;
+    margin-bottom: 1.67vh;
+    background: #ffffff;
+  }
+  .form-infor .circle {
+    position: absolute;
+    height: 10.87vw;
+    width: 10.87vw;
+    border-radius: 50%;
+    left: 2.42vw;
+    top: 1.4vh;
+    display: flex;
+  }
+  .form-infor .acronym {
+    position: absolute;
+    width: 5.8vw;
+    height: 2.34375vh;
+    left: 2.42vw;
+    right: 3.62vw;
+    top: 1.4vh;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 2.34375vh;
+    text-align: center;
+    text-transform: capitalize;
+    color: #ffffff;
+  }
+  .form-infor .infor {
+    position: absolute;
+
+    width: 33.09vw;
+    height: 2.34375vh;
+    left: 16.9vw;
+    top: 1.9vh;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 2.34375vh;
+    /* identical to box height */
+    text-transform: capitalize;
+  }
+  .form-infor .infor .cus-phone {
+    width: 17.63vw;
+    height: 1.67vh;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 1.67vh;
+    text-transform: capitalize;
+
+    color: #3e3e3e;
+  }
+  .form-infor .infor .cus-name {
+    width: 152px;
+    height: 23px;
+    margin-bottom: 3px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+
+    text-transform: capitalize;
+  }
+}

@@ -1,0 +1,75 @@
+<div class="container">
+  <div
+    class="close"
+    [routerLink]="['/order']"
+    routerLinkActive="router-link-active"
+  >
+    <svg
+      width="22"
+      height="22"
+      viewBox="0 0 22 22"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M21 21L1 1"
+        stroke="white"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+    <svg
+      width="22"
+      height="22"
+      viewBox="0 0 22 22"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M1 21L21 1"
+        stroke="white"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  </div>
+  <div class="container-infor">
+    <img
+      class="product-img"
+      [src]="'../assets/images/' + order?.product?.img"
+    />
+    <p class="invoice">Mã HĐ: {{ order?.invoice }}</p>
+    <div class="circle" [ngStyle]="{ background: order?.color }">
+      <p class="acronym">{{ order?.acronym }}</p>
+    </div>
+    <p class="cus-name" [ngStyle]="{ color: order?.color }">
+      {{ order?.name }}
+    </p>
+  </div>
+  <div class="container-detail">
+    <div class="progress-bill">
+      <p
+        (click)="onclick('bill,' + id)"
+        [ngClass]="{
+          active: urlChild === 'bill,' + id
+        }"
+        [routerLink]="['/orderDetail/bill', id]"
+      >
+        Hóa đơn
+      </p>
+      <p
+        (click)="onclick('progress,' + id)"
+        [ngClass]="{
+          active: urlChild === 'progress,' + id
+        }"
+        [routerLink]="['/orderDetail/progress', id]"
+      >
+        Tiến trình
+      </p>
+      <br />
+    </div>
+    <router-outlet> </router-outlet>
+  </div>
+</div>

@@ -1,0 +1,121 @@
+<div
+  [ngClass]="{ 'backgroud-change': toggleRecipe }"
+  (click)="toggleRecipe = !toggleRecipe"
+></div>
+
+<div class="container-bill" [ngClass]="{ 'bill-change': toggleRecipe }">
+  <form class="form-bill">
+    <div class="form-group">
+      <label for="product">Sản phẩm</label><br />
+      <app-combo-box
+        [values]="order?.product?.name"
+        [list]="listProducts"
+      ></app-combo-box>
+      <label for="amount">Số lượng</label><br />
+      <input
+        name="amount"
+        type="text"
+        class="form-control"
+        [ngModel]="order?.product?.amount"
+      />
+      <div class="price-total-container" (click)="toggleRecipe = !toggleRecipe">
+        <p class="price-total-title">Tổng tiền:</p>
+        <p class="price-total">{{ totalPrice | currency: "VND":"" }} VND</p>
+      </div>
+      <div class="container-price">
+        <label for="purchasePrice">Giá mua vào</label><br />
+        <input
+          name="purchasePrice"
+          type="text"
+          class="form-control"
+          [ngModel]="order?.product?.price"
+        />
+        <br /><br /><label for="oldPrice">Giá cũ</label><br />
+        <input
+          name="oldPrice"
+          type="text"
+          class="form-control"
+          [ngModel]="order?.product?.oldPrice"
+        />
+        <br /><br /><label for="shipPrice">Phí ship</label><br />
+        <input
+          name="shipPrice"
+          type="text"
+          class="form-control"
+          [ngModel]="ship"
+        />
+        <br /><br /><label
+          for="
+        profit"
+          >Lợi nhuận</label
+        ><br />
+        <input
+          name="
+          profit"
+          type="text"
+          class="form-control"
+          [ngModel]="profit"
+        />
+        <br /><br /><label
+          for="
+        otherCosts"
+          >Chi phí khác</label
+        ><br />
+        <input
+          name="otherCosts"
+          type="text"
+          class="form-control"
+          [ngModel]="otherCosts"
+        />
+      </div>
+
+      <!-- <input name="ship" type="text" class="form-control" /> -->
+    </div>
+    <button type="submit" class="button-edit">Chỉnh sửa</button>
+  </form>
+</div>
+<div class="recipe-container" [ngClass]="{ 'recipe-display': toggleRecipe }">
+  <p class="recipe-title">công thức</p>
+  <div class="price-container">
+    <div class="price-group">
+      <p class="title">Giá mua vào</p>
+      <p class="price">+{{ order?.product?.price }}</p>
+    </div>
+    <br />
+    <br />
+    <div class="price-group">
+      <p class="title">Lợi nhuận</p>
+      <p class="price">+{{ profit }}</p>
+    </div>
+    <br />
+    <br />
+    <div class="price-group">
+      <p class="title">Phí ship</p>
+      <p class="price">+{{ ship }}</p>
+    </div>
+    <br />
+    <br />
+    <div class="price-group">
+      <p class="title">Chi phí khác</p>
+      <p class="price" *ngIf="otherCosts > 0">+{{ otherCosts }}</p>
+      <p class="price" *ngIf="otherCosts == 0">{{ otherCosts }}</p>
+    </div>
+    <br />
+    <svg
+      width="330"
+      height="1"
+      viewBox="0 0 330 1"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <line y1="0.75" x2="330" y2="0.75" stroke="black" stroke-width="0.5" />
+    </svg>
+    <br />
+
+    <div class="price-group">
+      <p class="title">Tổng cộng</p>
+      <p class="price-total">{{ totalPrice | currency: "VND":"" }} VND</p>
+    </div>
+    <button class="button-OK" (click)="toggleRecipe = !toggleRecipe">OK</button>
+  </div>
+</div>

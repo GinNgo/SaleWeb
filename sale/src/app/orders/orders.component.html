@@ -1,0 +1,89 @@
+<div class="container">
+  <div class="header-container">
+    <svg
+      width="16"
+      height="16"
+      viewBox="0 0 16 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      [routerLink]="['../']"
+    >
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M8.7071 1.70711C9.09763 1.31658 9.09763 0.683419 8.7071 0.292895C8.31658 -0.0976292 7.68341 -0.0976292 7.29289 0.292895L0.292889 7.2929C-0.0976349 7.68342 -0.0976349 8.31658 0.292889 8.70711L7.29289 15.7071C7.68341 16.0976 8.31658 16.0976 8.7071 15.7071C9.09763 15.3166 9.09763 14.6834 8.7071 14.2929L3.41421 9H15C15.5523 9 16 8.55229 16 8C16 7.44772 15.5523 7 15 7H3.41421L8.7071 1.70711Z"
+        fill="#008080"
+      />
+    </svg>
+  </div>
+  <h2 class="title-order">đơn Hàng</h2>
+  <div class="container-1">
+    <p class="amount-order">13 đơn hàng</p>
+    <div class="filter-container" [routerLink]="['/filter']">
+      <svg
+        width="15"
+        height="10"
+        viewBox="0 0 15 10"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M5.83333 10H9.16667V8.33333H5.83333V10ZM0 0V1.66667H15V0H0ZM2.5 5.83333H12.5V4.16667H2.5V5.83333Z"
+          fill="#247009"
+        />
+      </svg>
+
+      <p class="filter">Bộ lọc</p>
+    </div>
+  </div>
+  <div class="order-list">
+    <div
+      class="form-infor"
+      *ngFor="let order of listOrders"
+      [routerLink]="['/orderDetail/bill', order.orderId]"
+      routerLinkActive="router-link-active"
+    >
+      <div class="status">
+        <p
+          [ngStyle]="{
+            background: order.period.background,
+            color: order.period.color
+          }"
+        >
+          {{ order.period.status }}
+        </p>
+      </div>
+      <div class="circle" [ngStyle]="{ background: order.color }">
+        <p class="acronym">{{ order.acronym }}</p>
+      </div>
+      <div class="infor">
+        <p class="cus-name" [ngStyle]="{ color: order.color }">
+          {{ order.name }}
+        </p>
+        <p class="cus-price">
+          {{ order.product.price * order.product.amount | currency: "VND":"" }}
+          VND
+        </p>
+        <p class="delivery-date">
+          Hẹn giao: {{ order.time }} - {{ order.date }}
+        </p>
+      </div>
+      <p class="invoice">{{ order.invoice }}</p>
+      <div class="product-container">
+        <div class="product">
+          <img
+            class="product-img"
+            [src]="'../assets/images/' + order.product.img"
+          />
+          <div class="product-infor">
+            <p class="product-name">{{ order.product.name }}</p>
+            <p class="product-detail">
+              {{ order.product.amount }} sản phẩm | Màu
+              {{ order.product.color }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,241 @@
+<div class="container">
+  <div class="header-container">
+    <div class="close" [routerLink]="['/order']">
+      <svg
+        width="22"
+        height="22"
+        viewBox="0 0 22 22"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M1 21L21 1"
+          stroke="#247009"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+      <svg
+        width="22"
+        height="22"
+        viewBox="0 0 22 22"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M21 21L1 1"
+          stroke="#247009"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </div>
+  </div>
+  <h2 class="title-filter">Bộ lọc</h2>
+  <div class="filter-group">
+    <div class="filter-period">
+      <p class="period-title">Thời gian</p>
+      <div class="input-group" (click)="togglePeriod = !togglePeriod">
+        <input class="period-input form-contro" value="1 tháng gần nhất" />
+        <svg
+          width="13"
+          height="8"
+          viewBox="0 0 13 8"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M6.5 8L0.00480938 0.5L12.9952 0.5L6.5 8Z" fill="black" />
+        </svg>
+      </div>
+    </div>
+    <!-- status -->
+    <div class="filter-status">
+      <p class="status-title">Trạng thái</p>
+      <div class="input-group" (click)="toggleStatus = !toggleStatus">
+        <input class="status-input form-contro" value="Tất cả" />
+        <svg
+          width="13"
+          height="8"
+          viewBox="0 0 13 8"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M6.5 8L0.00480938 0.5L12.9952 0.5L6.5 8Z" fill="black" />
+        </svg>
+      </div>
+    </div>
+    <!-- status - end -->
+    <!-- cus-order -->
+    <div class="filter-cus">
+      <p class="cus-title">Người đặt</p>
+      <div class="input-group" (click)="toggleCus = !toggleCus">
+        <input class="cus-input form-control" value="Tất cả" />
+        <svg
+          width="13"
+          height="8"
+          viewBox="0 0 13 8"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M6.5 8L0.00480938 0.5L12.9952 0.5L6.5 8Z" fill="black" />
+        </svg>
+      </div>
+    </div>
+    <!-- cus-order - end -->
+  </div>
+  <button class="apply">Áp Dụng</button>
+  <!-- period-choose -->
+  <div>
+    <div
+      [ngClass]="
+        togglePeriod == true || toggleCustomTime == true
+          ? 'backgroud-change'
+          : ''
+      "
+      (click)="togglePeriod = false; toggleCustomTime = false"
+    ></div>
+    <div
+      class="custom-time"
+      [ngClass]="{ 'custom-time-display': toggleCustomTime }"
+    >
+      <form>
+        <div class="form-group">
+          <p class="title-timeCus">Thời gian Tùy chỉnh</p>
+          <div class="chose-time">
+            <p class="start-time">Bắt đầu</p>
+            <div class="input-group">
+              <input
+                type="date"
+                class="start-time-input"
+                value="2021-01-01"
+              /><svg
+                width="13"
+                height="8"
+                viewBox="0 0 13 8"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.5 8L0.00480938 0.5L12.9952 0.5L6.5 8Z"
+                  fill="black"
+                />
+              </svg>
+            </div>
+          </div>
+          <div class="chose-time">
+            <p class="start-time">Kết thúc</p>
+            <div class="input-group">
+              <input
+                type="date"
+                class="start-time-input"
+                value="2021-03-01"
+              /><svg
+                width="13"
+                height="8"
+                viewBox="0 0 13 8"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.5 8L0.00480938 0.5L12.9952 0.5L6.5 8Z"
+                  fill="black"
+                />
+              </svg>
+            </div>
+          </div>
+          <p class="attention">Khoảng thời gian tối đa 2 tháng</p>
+          <button class="confirm" (click)="toggleCustomTime = false">OK</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div
+    class="period-container"
+    [ngClass]="{ 'period-container-toggle': togglePeriod }"
+  >
+    <p class="title-period">Thời gian</p>
+    <div class="period-choose">
+      <p>1 tháng gần nhất</p>
+      <svg
+        width="300"
+        height="1"
+        viewBox="0 0 300 1"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <line y1="0.75" x2="300" y2="0.75" stroke="black" stroke-width="0.5" />
+      </svg>
+      <p>2 tháng gần nhất</p>
+      <svg
+        width="300"
+        height="1"
+        viewBox="0 0 300 1"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <line y1="0.75" x2="300" y2="0.75" stroke="black" stroke-width="0.5" />
+      </svg>
+      <p (click)="togglePeriod = false; toggleCustomTime = !toggleCustomTime">
+        Tùy chỉnh
+      </p>
+    </div>
+  </div>
+  <!-- period-choose end -->
+  <!-- status-choose -->
+  <div
+    [ngClass]="{ 'backgroud-change': toggleStatus }"
+    (click)="toggleStatus = !toggleStatus"
+  ></div>
+  <div
+    class="status-container"
+    [ngClass]="{ 'status-container-toggle': toggleStatus }"
+  >
+    <p class="title-status">Trạng thái</p>
+    <form autocomplete="off" #bookForm="ngForm">
+      <div class="form-group">
+        <input type="checkbox" name="booked" class="form-control" value="" />
+        <label for="booked">Đã đặt</label><br />
+        <input type="checkbox" name="confirm" class="form-control" value="" />
+        <label for="confirm">Xác nhận</label><br />
+        <input type="checkbox" name="wait-pay" class="form-control" value="" />
+        <label for="wait-pay">Chờ thanh toán</label><br />
+        <input type="checkbox" name="complete" class="form-control" value="" />
+        <label for="complete">Hoàn thành</label><br />
+        <input type="checkbox" name="cancel" class="form-control" value="" />
+        <label for="cancel">Hủy</label><br />
+        <input type="checkbox" name="debt" class="form-control" value="" />
+        <label for="debt">Nợ</label><br />
+      </div>
+      <button type="submit" (click)="toggleStatus = false">OK</button>
+    </form>
+  </div>
+  <!-- status-choose end -->
+  <!-- cus-choose -->
+  <div
+    [ngClass]="{ 'backgroud-change': toggleCus }"
+    (click)="toggleCus = !toggleCus"
+  ></div>
+
+  <div class="cus-container" [ngClass]="{ 'cus-container-toggle': toggleCus }">
+    <p class="title-cus">Người đặt</p>
+    <form
+      autocomplete="off"
+      #bookForm="ngForm"
+      (ngSubmit)="addBook(bookForm.value)"
+    >
+      <div class="form-group" *ngFor="let cus of persion; index as i">
+        <input
+          type="checkbox"
+          name="name"
+          class="form-control"
+          value="cus.name"
+        />
+        <label for="name">{{ cus.name }}</label
+        ><br />
+      </div>
+      <button type="submit" (click)="toggleCus = false">OK</button>
+    </form>
+  </div>
+</div>

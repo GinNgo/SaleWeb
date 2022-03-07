@@ -1,0 +1,94 @@
+<div class="container">
+  <div class="close" [routerLink]="['../']">
+    <svg
+      width="22"
+      height="22"
+      viewBox="0 0 22 22"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M1 21L21 1"
+        stroke="#247009"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+    <svg
+      width="22"
+      height="22"
+      viewBox="0 0 22 22"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M21 21L1 1"
+        stroke="#247009"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  </div>
+
+  <h2 class="title-infor">Thông tin Khách Hàng</h2>
+  <div class="form-search">
+    <div class="input">
+      <svg
+        width="15"
+        height="15"
+        viewBox="0 0 15 15"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M13.1137 1.88631C11.8973 0.669902 10.28 0 8.55978 0C6.83956 0 5.22228 0.669902 4.00591 1.88631C2.78953 3.10269 2.1196 4.71996 2.1196 6.44016C2.1196 8.0129 2.67987 9.49937 3.7055 10.6723L0.128848 14.249C-0.0429492 14.4208 -0.0429492 14.6993 0.128848 14.8712C0.214746 14.957 0.327334 15 0.439893 15C0.552451 15 0.665068 14.9571 0.750937 14.8711L4.32762 11.2945C5.50058 12.3201 6.98704 12.8804 8.55978 12.8804C10.28 12.8804 11.8973 12.2105 13.1137 10.9941C14.33 9.77769 14.9999 8.16041 14.9999 6.44019C14.9999 4.71996 14.3301 3.10269 13.1137 1.88631ZM12.4915 10.3719C10.3235 12.5399 6.79605 12.5399 4.62806 10.3719C2.46009 8.20397 2.46009 4.67643 4.62806 2.50846C5.71216 1.42436 7.13575 0.88248 8.55981 0.88248C9.98352 0.88248 11.4077 1.42462 12.4916 2.50846C14.6595 4.6764 14.6595 8.20395 12.4915 10.3719Z"
+          fill="#759A67"
+        />
+      </svg>
+      <input
+        class="search"
+        type="text"
+        id="keyword "
+        name="keyword "
+        placeholder="Nhập SĐT hoặc Tên"
+      />
+    </div>
+  </div>
+
+  <div class="filter-container">
+    <p class="amount-cus">21 Khách hàng</p>
+    <div class="sort-container">
+      <svg
+        width="15"
+        height="10"
+        viewBox="0 0 15 10"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0 10H5V8.33333H0V10ZM0 0V1.66667H15V0H0ZM0 5.83333H10V4.16667H0V5.83333Z"
+          fill="#247009"
+        />
+      </svg>
+
+      <p class="sort">Sắp xếp</p>
+    </div>
+  </div>
+  <div class="customer-list">
+    <div
+      class="form-infor"
+      *ngFor="let cus of listCus; let i = index"
+      (click)="getCus(cus)"
+    >
+      <div class="circle" [ngStyle]="{ background: cus.color }">
+        <p class="acronym">{{ cus.acronym | uppercase }}</p>
+      </div>
+      <div class="infor">
+        <p class="cus-name" [ngStyle]="{ color: cus.color }">{{ cus.name }}</p>
+        <p class="cus-phone">{{ cus.phone }}</p>
+      </div>
+    </div>
+  </div>
+</div>

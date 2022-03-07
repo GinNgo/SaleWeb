@@ -1,0 +1,129 @@
+@media screen and (max-height: 896px) and (max-width: 414px) {
+  .container {
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: #ffffff;
+  }
+  .container-1 {
+    position: absolute;
+    width: 100%;
+    border-bottom: 2px solid #f9f9f9;
+    padding-bottom: 21px;
+    top: 54px;
+  }
+  .container-2 {
+    position: relative;
+    top: 120px;
+    width: 100vws;
+    height: 720px;
+
+    .router-menu {
+      width: 50%;
+      height: 150px;
+      background: #ffffff;
+      text-align: center;
+      float: left;
+      .img-order {
+        width: 120px;
+        height: 120px;
+      }
+      .titlee {
+        /* Đơn hàng */
+
+        position: absolute;
+        width: 50%;
+        height: 22px;
+
+        font-family: Nunito;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 22px;
+        /* identical to box height */
+
+        text-align: center;
+        text-transform: capitalize;
+
+        /* Black */
+
+        color: #000000;
+      }
+      .img-customer {
+        width: 180px;
+        height: 120px;
+      }
+      .img-product {
+        width: 193.66px;
+        height: 120px;
+      }
+      .img-report {
+        width: 120px;
+        height: 120px;
+      }
+    }
+  }
+  .shop-name {
+    width: 100%;
+    height: 25px;
+
+    top: 54px;
+    margin: 0px;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25px;
+    /* identical to box height */
+
+    text-align: center;
+    text-transform: capitalize;
+
+    color: #008080;
+  }
+  footer {
+    position: absolute;
+    top: 848px;
+    width: 100%;
+    height: 48px;
+    .developer-by {
+      position: absolute;
+      width: 120px;
+      height: 38px;
+      left: 146px;
+      font-family: Nunito;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 18px;
+      /* or 129% */
+
+      text-align: center;
+
+      /* Dark gray */
+
+      color: #707070;
+    }
+    .version {
+      position: absolute;
+      top: 18px;
+      width: 120px;
+      height: 38px;
+      left: 146px;
+      font-family: Nunito;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 18px;
+      /* or 129% */
+
+      text-align: center;
+
+      /* Dark gray */
+
+      color: #707070;
+    }
+  }
+}
