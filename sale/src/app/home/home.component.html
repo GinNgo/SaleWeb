@@ -11,15 +11,13 @@
       <img class="img-order" src="../assets/images/order.png" />
       <p class="title">Đơn hàng</p>
     </div>
-    <div class="router-menu">
+    <div
+      class="router-menu"
+      [routerLink]="['/customer']"
+      routerLinkActive="router-link-active"
+    >
       <img class="img-customer" src="../assets/images/customer.png" />
-      <p
-        class="title"
-        [routerLink]="['/customer']"
-        routerLinkActive="router-link-active"
-      >
-        Khách hàng
-      </p>
+      <p class="title">Khách hàng</p>
     </div>
     <div class="router-menu">
       <img class="img-product" src="../assets/images/product.png" />

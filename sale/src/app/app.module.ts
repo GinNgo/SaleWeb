@@ -13,6 +13,7 @@ import { ComboBoxComponent } from './combo-box/combo-box.component';
 import { OrderDetailComponent } from './order-detail/order-detail.component';
 import { BillComponent } from './bill/bill.component';
 import { ProgressComponent } from './progress/progress.component';
+import { ComboBoxCustomerComponent } from './combo-box-customer/combo-box-customer.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { ProgressComponent } from './progress/progress.component';
     OrderDetailComponent,
     BillComponent,
     ProgressComponent,
+    ComboBoxCustomerComponent,
   ],
   imports: [
     BrowserModule,

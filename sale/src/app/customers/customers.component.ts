@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./customers.component.scss'],
 })
 export class CustomersComponent implements OnInit {
+  public placeholder: String = 'Nhập SĐT hoặc Tên';
+
   public listCus = [
     {
       name: 'Phượng Chà Neo',
@@ -27,12 +29,22 @@ export class CustomersComponent implements OnInit {
     { name: 'Tiêu Tùng', acronym: 'TT', phone: '0360016039', color: '#D20404' },
     { name: 'Anh Oách', acronym: 'AO', phone: '0360016039', color: '#F37CD9' },
   ];
-
+  public listCusNamePhone: string[] = [];
   constructor() {}
 
   ngOnInit(): void {}
   getCus(data: any) {
     let a = data;
     console.log(a);
+  }
+  getCusName() {
+    this.listCusNamePhone = [];
+    this.listCus.forEach((e) => {
+      this.listCusNamePhone.push(e.name);
+    });
+    this.listCus.forEach((e) => {
+      this.listCusNamePhone.push(e.phone);
+    });
+    console.log(this.listCusNamePhone);
   }
 }

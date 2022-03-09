@@ -35,7 +35,7 @@
   <h2 class="title-infor">Thông tin Khách Hàng</h2>
   <div class="form-search">
     <div class="input">
-      <svg
+      <!-- <svg
         width="15"
         height="15"
         viewBox="0 0 15 15"
@@ -53,7 +53,12 @@
         id="keyword "
         name="keyword "
         placeholder="Nhập SĐT hoặc Tên"
-      />
+      /> -->
+      <app-combo-box-customer
+        [values]="placeholder"
+        [list]="listCusNamePhone"
+        (click)="getCusName()"
+      ></app-combo-box-customer>
     </div>
   </div>
 
